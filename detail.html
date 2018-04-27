@@ -54,7 +54,7 @@
 				<div class="inner">
 					<div class="content">
 						<h3>Vaisakh J Nair</h3>
-						<p>I'm a designer and developer trying to hone my skills every day. "illustration a day" is a project through which I intend to sharpen my Adobe Illustrator skills by making a brand new illustration for atleast 365 days. The project is inspired from Marko Stupić's <a href="http://icon-a-day.com" target="_blank">icon a day</a> project.</p>
+						<p>An idiot obsessed with perfect curves, crisp edges, bright colors and clean code. "illustration a day" is a project through which I intend to sharpen my Adobe Illustrator skills by making a brand new illustration for atleast 365 days. The project is inspired from Marko Stupić's <a href="http://icon-a-day.com" target="_blank">icon a day</a> project.</p>
 					</div>
 					<div class="copyright">
 						<h3>Find me</h3>
@@ -82,6 +82,7 @@
                 
                 var titles = ["title_array"];
                 var dates = ["date_array"];
+                var maxDays = 12;
                 //Start adding data
                 titles.push("Halcyon");
                 dates.push("16 April 2018");
@@ -105,6 +106,8 @@
                 dates.push("25 April 2018");
                 titles.push("Sails");
                 dates.push("26 April 2018");
+                titles.push("Tree");
+                dates.push("27 April 2018");
                 //End adding data
                 var day;
                 
@@ -165,7 +168,6 @@
                     var parameters = location.search.substring(1).split("&");
                     var temp = parameters[0].split("=");
                     var img_url = "images/day-";
-                    var maxDays = 11;
                     day = unescape(temp[1]);
                     pday = day - 1;
                     if(pday==0) {
