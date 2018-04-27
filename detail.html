@@ -78,6 +78,7 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/lazyload.js"></script>
 			<script src="assets/js/android_toast.js"></script>
+			<script src="assets/js/hammer.min.js"></script>
             <script language="JavaScript">
                 
                 var titles = ["title_array"];
@@ -110,7 +111,7 @@
                 dates.push("27 April 2018");
                 //End adding data
                 var day;
-                
+            
                 function shareToFB() {
                     var x = screen.width/2 - 700/2;
                     var y = screen.height/2 - 450/2;
@@ -184,8 +185,28 @@
                     document.getElementById("date").innerHTML = dates[day];
                     document.getElementById("prev").href = "detail.html?day="+pday;
                     document.getElementById("next").href = "detail.html?day="+nday;
+                                    
+                    document.addEventListener("keyup",function(e){
+                       var key = e.which||e.keyCode;
+                       switch(key){
+                          case 37:
+                             document.getElementById("prev").click();
+                          break;
+                          case 39:
+                             document.getElementById("next").click();
+                          break;
+                       }
+                    });
                 }
                 loadImageData();
+                var hammertime = new Hammer(myElement, myOptions);
+                hammertime.on('swipeleft', function(ev) {
+                    document.getElementById("prev").click();
+                });
+                hammertime.on('swiperight', function(ev) {
+                    document.getElementById("next").click();
+                });
+
             </script>
 	</body>
 
