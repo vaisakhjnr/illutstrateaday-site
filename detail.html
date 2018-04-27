@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<!--
+	Radius by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>detail.html</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/android_toast.css" />
+        <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="preview">
+				<div class="inner">
+					<div class="content">
+						<h1>Radius</h1>
+						<h2>A fully responsive masonry style portfolio template.</h2>
+					</div>
+					<a href="index.html" class="button hidden"><span>Let's Go</span></a>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="preview">
+				<div class="inner">
+					<div class="image fit">
+						<img class="lazyload" id="illo" src="images/day-11.jpg" alt="" />
+					</div>
+					<div class="content">
+						<header>
+                            <a id="smallicon" href="javascript:copyLink()" class="btn" target="_blank"><span class="fas fa-link"></span></a>
+                            <a id="smallicon" href="javascript:tweet()" class="btn" target="_blank"><span class="fab fa-twitter"></span></a>
+                            <a id="smallicon" href="javascript:shareToGPlus()" class="btn" target="_blank"><span class="fab fa-google-plus"></span></a>
+                            <a id="smallicon" class="btn" href="javascript:shareToFB()"><span class="fab fa-facebook"></span></a>
+							<h2 id="illo-title">Title</h2>
+                            <p id="date">19 April 2018</p>
+						</header>
+					</div>
+				</div>
+				<a id="prev" href="detail1.html" class="nav previous"><span class="fa fa-chevron-left"></span></a>
+				<a id="next" href="detail2.html" class="nav next"><span class="fa fa-chevron-right"></span></a>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<a href="#" class="info"><span class="fas fa-info-circle"></span><span>About</span></a>
+				<div class="inner">
+					<div class="content">
+						<h3>Vaisakh J Nair</h3>
+						<p>I'm a designer and developer trying to hone my skills every day. "illustration a day" is a project through which I intend to sharpen my Adobe Illustrator skills by making a brand new illustration for atleast 365 days. The project is inspired from Marko Stupić's <a href="http://icon-a-day.com" target="_blank">icon a day</a> project.</p>
+					</div>
+					<div class="copyright">
+						<h3>Find me</h3>
+						<ul class="icons">
+							<li><a href="https://www.behance.net/vaisakhjnr" class="icon fa-behance" target="_blank"><span class="label">Behance</span></a></li>
+							<li><a href="https://dribbble.com/vaisakhjnr" class="icon fa-dribbble" target="_blank"><span class="label">Dribbble</span></a></li>
+							<li><a href="https://www.instagram.com/vaisakhjnr" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.youtube.com/vaisakhjnr" class="icon fa-youtube" target="_blank"><span class="label">Youtube</span></a></li>
+							<li><a href="https://github.com/vaisakhjnr/" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
+							<li><a href="mailto:vaisakhjnr@gmail.com?subject=Illustration A Day" class="icon fa-envelope" target="_blank"><span class="label">Email</span></a></li>
+						</ul>
+						&copy; Design: <a href="https://templated.co" target="_blank">TEMPLATED</a>
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->        
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/lazyload.js"></script>
+			<script src="assets/js/android_toast.js"></script>
+            <script language="JavaScript">
+                
+                var titles = ["title_array"];
+                var dates = ["date_array"];
+                //Start adding data
+                titles.push("Halcyon");
+                dates.push("16 April 2018");
+                titles.push("Dusk");
+                dates.push("17 April 2018");
+                titles.push("Spooky");
+                dates.push("18 April 2018");
+                titles.push("White");
+                dates.push("19 April 2018");
+                titles.push("Eyes");
+                dates.push("20 April 2018");
+                titles.push("Street Lamps");
+                dates.push("21 April 2018");
+                titles.push("Felicity");
+                dates.push("22 April 2018");
+                titles.push("Balloon");
+                dates.push("23 April 2018");
+                titles.push("Moon");
+                dates.push("24 April 2018");
+                titles.push("Hair");
+                dates.push("25 April 2018");
+                titles.push("Sails");
+                dates.push("26 April 2018");
+                //End adding data
+                var day;
+                
+                function shareToFB() {
+                    var x = screen.width/2 - 700/2;
+                    var y = screen.height/2 - 450/2;
+                    url = "http://illustrateaday.com/detail.html?day="+day;
+                    window.open('http://facebook.com/sharer/sharer.php?u='+encodeURIComponent(url), '', 'left='+x+',top='+y+',width=700,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+                }
+                
+                function tweet() {
+                    var x = screen.width/2 - 700/2;
+                    var y = screen.height/2 - 450/2;
+                    url = "http://illustrateaday.com/detail.html?day="+day;
+                    window.open("https://twitter.com/share?url="+encodeURIComponent(url), '', 'left='+x+',top='+y+',width=700,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+                }
+                
+                function shareToGPlus() {
+                    var x = screen.width/2 - 700/2;
+                    var y = screen.height/2 - 450/2;
+                    url = "http://illustrateaday.com/detail.html?day="+day;
+                    window.open("https://plus.google.com/share?url="+encodeURIComponent(url), '', 'left='+x+',top='+y+',width=700,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+                }
+                
+                function copyLink() {
+                    url = "http://illustrateaday.com/detail.html?day="+day;
+                    copyTextToClipboard(url);
+                    var toast1 = new Android_Toast({content: 'Link Copied to Clipboard'});
+                }
+            
+                function copyTextToClipboard(text) {
+                  var textArea = document.createElement("textarea");
+
+                  textArea.style.position = 'fixed';
+                  textArea.style.top = 0;
+                  textArea.style.left = 0;
+                  textArea.style.width = '2em';
+                  textArea.style.height = '2em';
+                  textArea.style.padding = 0;
+                  textArea.style.border = 'none';
+                  textArea.style.outline = 'none';
+                  textArea.style.boxShadow = 'none';
+                  textArea.style.background = 'transparent';
+                  textArea.value = text;
+                  document.body.appendChild(textArea);
+                  textArea.select();
+                  try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'successful' : 'unsuccessful';
+                    console.log('Copying text command was ' + msg);
+                  } catch (err) {
+                    console.log('Oops, unable to copy');
+                  }
+                  document.body.removeChild(textArea);
+                }
+                
+                function loadImageData() {
+                    var parameters = location.search.substring(1).split("&");
+                    var temp = parameters[0].split("=");
+                    var img_url = "images/day-";
+                    var maxDays = 11;
+                    day = unescape(temp[1]);
+                    pday = day - 1;
+                    if(pday==0) {
+                        pday = maxDays;
+                    }
+                    nday = parseFloat(day) + parseFloat(1);
+                    if(nday>maxDays) {
+                        nday = 1;
+                    }
+                    document.title = titles[day] + " | Illustration-A-Day | vaisakhjnr"
+                    img_url = img_url + day+".jpg";
+                    document.getElementById("illo").src = img_url;
+                    document.getElementById("illo-title").innerHTML = titles[day];
+                    document.getElementById("date").innerHTML = dates[day];
+                    document.getElementById("prev").href = "detail.html?day="+pday;
+                    document.getElementById("next").href = "detail.html?day="+nday;
+                }
+                loadImageData();
+            </script>
+	</body>
+
+</html>
