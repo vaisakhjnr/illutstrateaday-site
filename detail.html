@@ -58,7 +58,7 @@
 				<div class="inner">
 					<div class="content">
 						<h3>Vaisakh J Nair</h3>
-						<p>An idiot obsessed with perfect curves, crisp edges, bright colors and clean code. "illustration a day" is a project through which I intend to sharpen my Adobe Illustrator skills by making a brand new illustration for at least 365 days. The project is inspired from Marko Stupić's <a href="http://icon-a-day.com" target="_blank">icon a day</a> project.</p>
+						<p>An idiot obsessed with perfect curves, crisp edges, bright colors and clean code. "illustration a day" is a project through which I intend to sharpen my Adobe Illustrator skills by making a brand new illustration for at least 365 days.</p>
 					</div>
 					<div class="copyright">
 						<h3>Find me</h3>
@@ -75,7 +75,7 @@
 				</div>
 			</footer>
 
-		<!-- Scripts -->        
+		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
@@ -84,10 +84,10 @@
 			<script src="assets/js/android_toast.js"></script>
 			<script src="assets/js/hammer.min.js"></script>
             <script language="JavaScript">
-                
+
                 var titles = ["title_array"];
                 var dates = ["date_array"];
-                var maxDays = 97;
+                var maxDays = 101;
                 //Start adding data
                 titles.push("Halcyon");
                 dates.push("16 April 2018");
@@ -283,36 +283,44 @@
                 dates.push("20 July 2018");
                 titles.push("Waterfall");
                 dates.push("21 July 2018");
+                titles.push("Hourglass");
+                dates.push("22 July 2018");
+                titles.push("Woods");
+                dates.push("23 July 2018");
+                titles.push("Forest Night");
+                dates.push("23 July 2018");
+                titles.push("Floppy");
+                dates.push("24 July 2018");
                 //End adding data
                 var day;
-            
+
                 function shareToFB() {
                     var x = screen.width/2 - 700/2;
                     var y = screen.height/2 - 450/2;
                     url = "http://illustrateaday.com/detail.html?day="+day;
                     window.open('http://facebook.com/sharer/sharer.php?u='+encodeURIComponent(url), '', 'left='+x+',top='+y+',width=700,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
                 }
-                
+
                 function tweet() {
                     var x = screen.width/2 - 700/2;
                     var y = screen.height/2 - 450/2;
                     url = "http://illustrateaday.com/detail.html?day="+day;
                     window.open("https://twitter.com/share?url="+encodeURIComponent(url), '', 'left='+x+',top='+y+',width=700,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
                 }
-                
+
                 function shareToGPlus() {
                     var x = screen.width/2 - 700/2;
                     var y = screen.height/2 - 450/2;
                     url = "http://illustrateaday.com/detail.html?day="+day;
                     window.open("https://plus.google.com/share?url="+encodeURIComponent(url), '', 'left='+x+',top='+y+',width=700,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
                 }
-                
+
                 function copyLink() {
                     url = "http://illustrateaday.com/detail.html?day="+day;
                     copyTextToClipboard(url);
                     var toast1 = new Android_Toast({content: 'Link Copied to Clipboard'});
                 }
-            
+
                 function copyTextToClipboard(text) {
                   var textArea = document.createElement("textarea");
 
@@ -338,7 +346,7 @@
                   }
                   document.body.removeChild(textArea);
                 }
-                
+
                 function loadImageData() {
                     var parameters = location.search.substring(1).split("&");
                     var temp = parameters[0].split("=");
@@ -359,7 +367,7 @@
                     document.getElementById("date").innerHTML = dates[day];
                     document.getElementById("prev").href = "detail.html?day="+pday;
                     document.getElementById("next").href = "detail.html?day="+nday;
-                                    
+
                     document.addEventListener("keyup",function(e){
                        var key = e.which||e.keyCode;
                        switch(key){
